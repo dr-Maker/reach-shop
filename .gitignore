@@ -1,4 +1,5 @@
 /node_modules
 /src/assets/*/*.png
 
+recursos.txt
 package-lock.json
