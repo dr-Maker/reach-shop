@@ -24,7 +24,7 @@ const App = ()=>{
                 <BrowserRouter>
                 
                             <Routes>
-                                <Route  path="/" element={<Home/>}/>
+                                <Route  index  element={<Home/>}/>
                                 <Route  path="/login" element={<Login />}/>
                                 <Route  path="/recovery-password" element={<RecoveryPassword />}/>
                                 <Route  path="/send-email" element={<SendMail />}/>
