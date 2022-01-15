@@ -43,7 +43,6 @@ module.exports = {
             //     test: /\.s[ac]ss$/i,
                 test: /\.(css|scss)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
                     "style-loader",
                     "css-loader",
                     "sass-loader",
@@ -61,7 +60,9 @@ module.exports = {
             filename : './index.html'
         }),
         
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
         new CleanWebpackPlugin(),
     ],
     devServer: {
