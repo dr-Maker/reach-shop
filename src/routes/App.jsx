@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  HashRouter, Routes, Route } from "react-router-dom";
 import Layout from '../containers/Layout';
-import Home from "../pages/Home";
+import Home from "@pages/Home";
 import Login from '../pages/Login';
 import RecoveryPassword from '../pages/RecoveryPassword';
 import SendMail from '../pages/SendMail';
@@ -20,23 +21,30 @@ const App = ()=>{
     const initialState = useInitialState();
     return (
         <AppContext.Provider value={initialState}>
-             <Layout>
-                <BrowserRouter>
-                
-                            <Routes>
-                                <Route  index  element={<Home/>}/>
-                                <Route  path="/login" element={<Login />}/>
-                                <Route  path="/recovery-password" element={<RecoveryPassword />}/>
-                                <Route  path="/send-email" element={<SendMail />}/>
-                                <Route  path="/new-password" element={<NewPassword />}/>
-                                <Route  path="/account" element={<MyAccount />}/>
-                                <Route  path="/singup" element={<CreateAccount />}/>
-                                <Route  path="/checkout" element={<Checkout />}/>
-                                <Route  path="/orders" element={<Orders />}/>
-                                <Route path={"*"} element={<NotFound />} />
-                            </Routes>         
-                </BrowserRouter>
-            </Layout>
+           
+                <HashRouter>
+                {/* <BrowserRouter> */}
+                    <Layout>
+                    
+                                <Routes>
+                                    <Route exact path="/"  element={<Home/>}/>
+                                    <Route exact path="/login" element={<Login />}/>
+                                    <Route exact path="/recovery-password" element={<RecoveryPassword />}/>
+                                    <Route exact path="/send-email" element={<SendMail />}/>
+                                    <Route exact path="/new-password" element={<NewPassword />}/>
+                                    <Route exact path="/account" element={<MyAccount />}/>
+                                    <Route exact path="/singup" element={<CreateAccount />}/>
+                                    <Route exact path="/checkout" element={<Checkout />}/>
+                                    <Route exact path="/orders" element={<Orders />}/>
+                                    <Route path="*" element={<NotFound />} />  
+                                </Routes>    
+                    </Layout>     
+                {/* </BrowserRouter> */}
+                </HashRouter>
+
+
+
+            
         </AppContext.Provider>
         )
 }

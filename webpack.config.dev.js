@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 
 
 
@@ -10,10 +10,10 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: "./",
+        publicPath: "/",
     },
 
-     mode: 'production',
+     mode: 'development',
 
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -68,7 +68,6 @@ module.exports = {
              filename: '[name].css',
         }),
         
-        new CleanWebpackPlugin(),
 
 
     ],
