@@ -1,6 +1,6 @@
 import React from 'react';
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {  HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import {  HashRouter, Routes, Route } from "react-router-dom";
 import Layout from '../containers/Layout';
 import Home from "@pages/Home";
 import Login from '../pages/Login';
@@ -22,8 +22,8 @@ const App = ()=>{
     return (
         <AppContext.Provider value={initialState}>
            
-                <HashRouter>
-                {/* <BrowserRouter> */}
+                {/* <HashRouter> */}
+                <BrowserRouter>
                     <Layout>
                     
                                 <Routes>
@@ -39,8 +39,8 @@ const App = ()=>{
                                     <Route path="*" element={<NotFound />} />  
                                 </Routes>    
                     </Layout>     
-                {/* </BrowserRouter> */}
-                </HashRouter>
+                </BrowserRouter>
+                {/* </HashRouter> */}
 
 
 
