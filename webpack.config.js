@@ -81,9 +81,9 @@ module.exports = {
     // }
 
 
-    // devServer: {
-    //     historyApiFallback:true,
-    //   }
+    devServer: {
+        historyApiFallback:true,
+      }
 
 
 
