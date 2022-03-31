@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: './'
+        publicPath: ''
     },
 
      mode: 'production',
@@ -59,9 +59,9 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            inject: true,
-            template : './public/index.html',
-            filename : '/index.html'
+
+            template: "./public/index.html",
+    
            
         }),
 
@@ -85,7 +85,5 @@ module.exports = {
     devServer: {
         historyApiFallback:true,
       }
-
-
 
 }

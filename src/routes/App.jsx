@@ -27,7 +27,7 @@ const App = ()=>{
                     <Layout>
                     
                                 <Routes>
-                                    <Route path="/"  element={<Home/>}/>
+                                    <Route path="/dist/index.html"  element={<Home/>}/>
                                     <Route exact path="/login" element={<Login />}/>
                                     <Route exact path="/recovery-password" element={<RecoveryPassword />}/>
                                     <Route exact path="/send-email" element={<SendMail />}/>
