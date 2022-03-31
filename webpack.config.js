@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: "/",
+        publicPath: './'
     },
 
      mode: 'production',
@@ -61,7 +61,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template : './public/index.html',
-            filename : './index.html'
+            filename : '/index.html'
+           
         }),
 
         new MiniCssExtractPlugin({
